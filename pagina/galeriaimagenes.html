@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>galeria de imagenes</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="index.css">
+<!--<script src="index.js"></script>-->
+<style>
+	.columnas{
+		padding-top: 20%;
+		float:left;
+		width: 25%;
+		padding: 10px;
+	}
+	.columnas img{
+		width: 100%;
+		height: 50%;
+	opacity: 0.8;
+	cursor: pointer;
+	}
+	.columnas img:hover{
+		opacity: 1;
+	}
+	.informacion:after{
+		content: "";
+		display: table;
+		clear:both;
+	}
+	.contenedor{
+		position: relative;
+		display: none;
+	}
+	#imagenTexto{
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+		color:white;
+		font-size: 20px;
+	}
+	.cerrarBoton{
+		position: absolute;
+		top:10px;
+		right: 15px;
+		color:white;
+		font-size: 35px;
+		cursor:pointer;
+	}
+</style>
+<body>
+	<body>
+	<header>
+		<h1></h1>
+		<p> </p>
+	</header>
+	<div class="top_div">
+
+		<nav class="top_nav">
+		
+			<a href="index.html" >¿que es?</a>
+			<a href="quien.html" >¿que/quien lo produce?</a>
+			<a href="consecuencias.html" >consecuencias</a>
+			<a href="efectoinvernadero.html" >efecto invernadero</a>
+			<a href="futuro.html" >nuestro futuro</a>
+			<a href="quepodemos.html" >que podemos hacer</a>
+			<a href="galeriaimagenes.html" >galeria de imagenes</a>
+			
+		</nav>
+	</div>
+
+	<div class="informacion">
+		<div class="columnas">
+			<img src="imagenes/Cambio-climatico-que-es.jpg" alt="el mundo un una mano" onclick="galeria(this);">
+		</div>
+		<div class="columnas">
+			<img src="imagenes/girasol.jpg" alt="girasol en tierra seca" onclick="galeria(this);">
+		</div>
+		<div class="columnas">
+			<img src="imagenes/la-tierra-desde-el-cielo.jpg" alt="el planeta tierra desde el cielo" onclick="galeria(this);">
+		</div>
+		<div class="columnas">
+			<img src="imagenes/naturaleza.jpg" alt="una mano de la madre tierra" onclick="galeria(this);">
+		</div>
+
+		<div class="columnas">
+			<img src="imagenes/tifon.jpg" alt="tifon" onclick="galeria(this);">
+		</div>
+		<div class="columnas">
+			<img src="imagenes/union.jpg" alt="union" onclick="galeria(this);">
+		</div>
+		<div class="columnas">
+			<img src="imagenes/fabrica-cambio-climatico.jpg" alt="la fabrica" onclick="galeria(this);">
+		</div>
+		<div class="columnas">
+			<img src="imagenes/osopolar.jpg" alt="polar" onclick="galeria(this);">
+		</div>
+		</div>
+		<div class="columnas">
+			<img src="imagenes/Cumbre-sobre-el-Cambio-Climático.jpg" alt="deforestacion" onclick="galeria(this);">
+		</div>
+		<div class="columnas">
+			<img src="imagenes/medio_ambiente.jpg" alt="la fabrica" onclick="galeria(this);">
+		</div>
+		<div class="columnas">
+			<img src="imagenes/contaminacion.jpg" alt="contaminacion" onclick="galeria(this);">
+		</div>
+	</div>
+
+	<div class="contenedor">
+		<span onclick="this.parentElement.style.display='none'" class="cerrarBoton">&times</span>
+
+		<img  id="expandirImagen" style="width:100%;">
+
+		<div id="imagenTexto"></div>
+	</div>
+
+	<div class="footer">
+		<ul class="bottomFooter">
+			<li class="bottomLi">
+				<a href="">intragram</a>
+			</li>
+			<li class="bottomLi">
+				<a href="">facebook</a>
+			</li>
+			<li class="bottomLi">
+				<a href="">Gmail</a>
+			</li>
+		</ul>
+			
+		</div>
+	<script>
+			function galeria(imgs){
+				var expandirImg = document.getElementById("expandirImagen");
+
+				var imagenText= document.getElementById("imagenTexto");
+				expandirImg.src=imgs.src;
+
+		imagenText.innerHTML=imgs.alt;
+
+				expandirImg.parentElement.style.display = "block";
+			}
+	</script>
+</body>
+</head>
+</html>
+

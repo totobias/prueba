@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>efecto invernadero</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="index.css">
+<!--<script>
+		function validarDatos(){
+			var nombre=document.getElementsIdByTId('name').value,
+			apellido= document.getElementById('apellido').value,
+			 fechaNac=document.getElementById('fecNac').value,
+			 email=document.getElementById('email').value
+			 recomendacion=document.getElementById('textarea').value;
+			 //valido el nombre:
+			 //no debe estar el campo vacio
+		if(!nombre || nombre.trim()== ""){
+			alert("debe ingresar un nombre");
+			return false
+		}
+		//nombre y apellido deben tener por lo menos dos caracteres
+		 if((nombre.length<2) || (apellido.length<2)){
+		 	alert("nombre y apellido deben tener mas de dos caracteres");
+		 return false;
+		 }
+		 //obtengo la fecha de computadora
+	 var fechaActual= new Date() , fhechaMinima= new Date("01-01-1980");
+	  //trabajo con fecha de formulario
+	 //coloco un condicional para validar la fecha
+	 /*la fecha tiene que ser mayor al primero de Enero de 1980 y menor que la fecha actual.*/ 
+	 if((fechaIngresada < fhechaMinima) || (fechaIngresada >fechaActual))  {
+		alert("fecha de nacimiento debe ser mayor al primero de anero de 1980 y menor o igual a la fecha actual");
+	 	return false;
+	 } else { 
+	 alert("genial");
+	 return true;
+	}
+		 return true;
+		}
+	</script>-->
+	<script > //src="practica.js"
+    function validarDatos(){
+	var nombre= document.getElementById("nombre").value,
+	apellido = document.getElementById("apellido").value,
+	fecha_Nac = document.getElementById("fecha").value;
+	var textarea=document.getElementById("textarea").value;
+	var fechaIngresada= new Date(fecha_Nac);
+
+		if((!nombre || nombre.trim()== "")|| (!apellido || apellido.trim()== "")){
+			alert("debe ingresar un nombre y apellido");
+			return false
+		}
+		 if((nombre.length<2) || (apellido.length<2)){
+		 	alert("nombre y apellido deben tener mas de dos caracteres");
+		 return false;
+		 }
+	 //obtengo la fecha de computadora
+	 //obtengo la fecha de computadora
+	 var fechaActual= new Date() , fhechaMinima= new Date("01-01-1980");
+	 
+	 //trabajo con fecha de formulario
+	 //coloco un condicional para validar la fecha
+	 /*la fecha tiene que ser mayor al primero de Enero de 1980 y menor que la fecha actual.*/ 
+	 if((fechaIngresada < fhechaMinima) || (fechaIngresada >fechaActual))  {
+		alert("fecha de nacimiento debe ser mayor al primero de anero de 1980 y menor o igual a la fecha actual");
+	 	return false;
+	 } else { 
+	 alert("genial");
+	 return true;
+	}
+	
+
+	 return true;
+}
+</script>
+<style>
+	.columna {
+	border-radius: 4px ;
+	}
+	.img_efecto_invernadero{
+		background-image: url(imagenes/efecto_invernadero.jpg);
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+ 	border-radius: 15px 50px 15px;
+	}
+	input[type=text],input[type=date],input[type=email],textarea{
+		width: 100%;
+		padding: 12px 20px;
+		margin:8px 0;
+		display: block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		
+	}
+	
+	input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+textarea{
+	height: 150px;
+	resize:none;
+}
+	input[type=submit]:hover{
+		background-color: #45a049; 
+	}
+</style> 
+
+<body>
+	<header>
+		<h1></h1>
+		<p> </p>
+	</header>
+	<div class="top_div">
+
+		<nav class="top_nav">
+		
+			<a href="index.html" >¿que es?</a>
+			<a href="quien.html" >¿que/quien lo produce?</a>
+			<a href="consecuencias.html" >consecuencias</a>
+			<a href="efectoinvernadero.html" >efecto invernadero</a>
+			<a href="futuro.html" >nuestro futuro</a>
+			<a href="quepodemos.html" >que podemos hacer</a>
+			<a href="galeriaimagenes.html" >galeria de imagenes</a>
+			
+		</nav>
+	</div>
+
+	<section class="informacion">
+		<div class="leftColumn"> 
+		<div class="columna">
+			<h2>nuestro efecto invernadero
+			 </h2>
+			<h5></h5>
+			<div class="img_efecto_invernadero" style="height: 200px;">
+				<p class="nuestro_mundo"></p>
+				
+			</div>	
+			<p>El efecto invernadero es un fenómeno atmosférico natural que permite mantener una temperatura agradable en el planeta, al retener parte de la energía que proviene del sol. A través de las actividades humanas  se liberan grandes cantidades de carbono a la atmósfera a un ritmo mayor de aquel con que los productores y el océano pueden absorberlo, éstas actividades han perturbado el presupuesto global del carbono, aumentando, en forma lenta pero continua el CO2 en la atmósfera; propiciando cambios en el clima con consecuencias en el ascenso en el nivel del mar, cambios en las precipitaciones, desaparición de bosques, extinción de organismos y problemas para la agricultura.</p></div>
+		<div class="columna">
+			<h2>Indique algun comentario para majorar la información del sitio</h2>
+			<!--<form name="formulario"  onsubmit="return validarDatos();">
+				
+				<input type="submit" value="enviar" name="submit" id="boton">
+			</form>-->
+			<form name="formulario"  onsubmit="return validarDatos();"><label for="name">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" placeholder="Su nombre . .">
+				<label for="apellido">apellido:</label>
+				<input type="text" id="apellido" name="apellido"
+				placeholder="Tu apellido" >
+				<label for="nacimiento">
+					fecha de nacimiento
+				</label>
+				<input type="date" id="fecha" name="fecha">
+				<label for="email">ingrese su E-mail</label>
+				<input type="email" name="Email" id="email" placeholder="ejemplo: juanito@gmail.com">
+				<label for="texto">recomendacion:</label>
+				<textarea id="textarea" name="textarea" placeholder="agrege aquí su recomendacion"></textarea>
+ 
+<input type="submit" value="cargar datos" name="submit" id="boton" >
+
+</form>
+
+		</div></div>
+		<div class="rightColumn">
+		<div class="columna">
+			<h2>temas interesantes</h2>
+			<h5>
+			 quizas te pueda interesar</h5>
+			<div class="img_tema_interesante" style="height: 100px;"></div>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mecenas se sientan amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+			</p>
+		</div></div>
+		</article>
+	</section>
+	<div class="footer">
+		<ul class="bottomFooter">
+			<li class="bottomLi">
+				<a href="">intragram</a>
+			</li>
+			<li class="bottomLi">
+				<a href="">facebook</a>
+			</li>
+			<li class="bottomLi">
+				<a href="">Gmail</a>
+			</li>
+		</ul>
+			
+		</div>
+
+</body>
+</head>
+</html>

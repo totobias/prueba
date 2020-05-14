@@ -1,0 +1,172 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	align-content: center;
+	padding-left: 15%;
+	padding-right: 15%;
+	font-family: Arial;
+	background-color: #BFD6C0;
+	margin:0;
+}
+
+/*estilo de encabezado*/
+header{
+	background-color: #77D379;
+	text-align: center;
+	padding: 20px;
+	height: 200px;
+}
+header h1{
+	font-size: 50px;
+}
+/*estilo barra de navegacion superior*/
+nav {
+	width: 100%;
+	overflow: hidden;
+	position: sticky;
+	top:0;
+	padding-top: 20px;
+	
+}
+/*estilo de las listas superiornav{
+	border-right: 1px solid #bbb;
+	float:left;
+	
+	}*/
+
+	/*estilos de los enlaces superior*/
+nav a{
+	float:left;
+	list-style-type: none;
+	text-align: center;
+	color: white;
+	display: block;
+	padding: 14px 16px;
+	text-decoration: none;
+	background-color: #42504B;
+	border-right: 1px solid #BFD6C0;
+}
+nav a:hover{
+/*coloco color negro al pasar por ensicma del enlace */
+background-color: #0D0404;
+}
+/*imagen*/
+.img, .img_que_es, .img_tema_interesante, .img_quien_lo {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+}
+
+/*columna izquierda*/
+.leftColumn{
+	float: left;
+	width: 75%;}
+/*columna derecha*/
+.rightColumn{
+	float:left;
+	width: 25%;
+	padding-left: 20px;
+}
+/*creo tres columnas que flotan una al lado de la otra*/
+.columna{
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+}
+/*.borro flotantes despues de las columnas*/
+.informacion:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*diseño receptivo: hace que las tres 
+columnas se apilen una encima de la otra en
+ lugar de una al lado de la otra*/
+@media screen and (max-width:600px) {
+  .leftColumn, .rightColumn {
+	width: 100%;
+	padding: 0;
+  	}}
+  	/*diseño receptivo: hace que las barra 
+de navegacion se apile uno encima del otro
+en lugar de uno al lado de otro*/
+ @media screen and (max-width: 400px){
+ 	nav a{
+ 		float:none;
+ 		width: 100%;
+ 	}
+ }
+.footer{
+	clear:both;
+	padding:px;
+  	background-color: #4B5F4C;
+  	padding: 3px;
+  	text-align: center;
+  	margin-top: 10px;
+  	overflow: hidden;
+	
+  }
+
+  /*agrego imagen de fondo a header*/
+  header{
+  	background-image: url(imagenes/Cambio-climatico.jpg);
+	background-repeat: no-repeat;  
+	background-size: 100% 100%;
+  }
+ .img{
+  	background-image: url(imagenes/Cambio-climatico-que-es.jpg);
+	background-size: 100% 100% ;
+	background-repeat: no-repeat;
+  }
+ .img_que_es{
+  	background-image: url(imagenes/la-tierra-desde-el-cielo.jpg);
+	background-size: 100% 100% ;
+	background-repeat: no-repeat;
+  }
+  /*edito la palabra dentro de la caja clase="img_que_es"*/
+  .nuestro_mundo{
+  	text-align: center;
+  	font-family: Arial;
+  	font-size: 40px;
+  	font-weight: bold;
+  }
+  .nuestro_mundo:hover{
+  	font-family: serif;
+  	font-size: 60px;
+  	color:#414E41 ;
+  }
+  /*trabajo con la imagen de la columna rightColumn*/
+ .img_tema_interesante{
+ 	background-image: url(imagenes/cerebro-verde.jpg);
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+
+ }
+
+ /*trabajo con la lista del pie de pagina*/
+
+ ul.bottomFooter{
+ 	display: block;
+ 	text-align: center;
+ 	overflow: hidden;
+ 	width: 100%;
+ 	list-style-type: none;
+ 	height: 100%;
+	background-color: #BAD7BA;
+
+ 	
+ }
+ ul.bottomFooter a {
+ 	float: right;
+ 	text-decoration: none;
+ 	list-style-type: none;
+	padding:0px; 
+	font-size: 20px;
+	margin-right: 10px;
+	color:white;
+	font-family: "times new roman";
+	border: 1px solid #BFD6C0;
+
+ }
